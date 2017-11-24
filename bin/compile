@@ -26,7 +26,7 @@ then
    do
      lang="${array[i]}"
      echo $lang 'training data'
-     curl https://github.com/Alamot/heroku-buildpack-tesseract/raw/master/hsk.traineddata > $INSTALL_DIR_TRAINING_DATA/$lang.traineddata
+     curl -L https://github.com/Alamot/heroku-buildpack-tesseract/raw/master/hsk.traineddata > $INSTALL_DIR_TRAINING_DATA/$lang.traineddata
    done
 fi
 
