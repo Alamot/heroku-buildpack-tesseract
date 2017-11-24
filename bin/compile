@@ -11,7 +11,7 @@ TRAINING_DATA_DIR=${HOME}/vendor
 TESSERACT_OCR_DIR=${HOME}/vendor/tesseract-ocr
 ENVSCRIPT=$BUILD_DIR/.profile.d/tesseract-ocr.sh
 
-TESSERACT_OCR_LANGUAGES=eng
+TESSERACT_OCR_LANGUAGES=hsk
 
 echo "Unpacking Tesseract-OCR binaries"
 mkdir -p $INSTALL_DIR
@@ -26,7 +26,7 @@ then
    do
      lang="${array[i]}"
      echo $lang 'training data'
-     curl https://raw.githubusercontent.com/tesseract-ocr/tessdata/$TESSERACT_OCR_DATA_VERSION/$lang.traineddata > $INSTALL_DIR_TRAINING_DATA/$lang.traineddata
+     curl https://github.com/Alamot/heroku-buildpack-tesseract/raw/master/hsk.traineddata > $INSTALL_DIR_TRAINING_DATA/$lang.traineddata
    done
 fi
 
